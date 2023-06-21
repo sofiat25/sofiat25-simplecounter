@@ -13,6 +13,7 @@ import SimpleCounter from "./component/home.jsx";
 
 
 
+
 //render your react application
 ReactDOM.render(<SimpleCounter digitSix={ six} digitFive={ five} digitFour={ four} digitThree={ three} digitTwo={two} digitOne={ one}/>,
 document.querySelector("#app"));
