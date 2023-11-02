@@ -7,7 +7,7 @@ import ReactDOM from "react-dom";
 function  SimpleCounter(props)  {
 	return (
 		<div className="counter">
-    <div class="col"><i className="far fa-clock"></i>	
+    <div className="col"><i className="far fa-clock"></i>	
     </div>
     <div className="col-four">{props.digitFour %10}</div>
     <div className="col-three">{props.digitThree %10}</div>
