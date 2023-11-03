@@ -9,29 +9,35 @@ import "../styles/index.css";
 
 //import your own components
 import SimpleCounter from "./component/home.jsx";
-let counter = 0;
+
+
+
+
+let seg, seg2, min, min2, hour, hour2 
+
+seg = seg2 = min = min2 = hour = hour2 = 0;
 setInterval(function() {
-	const  four = Math.floor(counter/1000);
-	const  three = Math.floor(counter/100);
-	const  two = Math.floor(counter/10);
-	const  one = Math.floor(counter/1);
-console.log(four,three, two, one); 
+		seg++
+	if (seg == 10){
+		seg = 0
+		seg2++
+	}
+	if (seg2 == 10) {
+		seg = 0
+		seg2 = 0
+		min++
+	}
+	if ( min == 10){
+		seg = 0
+		seg2 = 0
+		min=0
+		min2++
+	}
 
-counter++; 
+
+
 ReactDOM.render(
-	<SimpleCounter  digitOne={ one} digitTwo={two} digitThree={three} digitFour={four} />,
+	<SimpleCounter  digitOne={ seg} digitTwo={seg2} digitThree={min} digitFour={min2}/>,
 	document.querySelector("#app"));
-	
+
 }, 1000);
-
-
-
-// const  four = Math.floor(counter/1000);
-// 	const  three = Math.floor(counter/100);
-// 	const  two = Math.floor(counter/10);
-// 	const  one = Math.floor(counter/1);
-// console.log(four,three, two, one); 
-
-// counter++; 
-
-// digitThree={three} digitFour={four}
